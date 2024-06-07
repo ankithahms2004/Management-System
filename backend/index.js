@@ -17,7 +17,7 @@ app.use(express.json({ limit: '10mb' }))
 app.use(cors())
 
 mongoose
-    .connect(process.env.MONGO_URL, {
+    .connect('mongodb://localhost:27017/Student', {
         useNewUrlParser: true,
         useUnifiedTopology: true
     })
