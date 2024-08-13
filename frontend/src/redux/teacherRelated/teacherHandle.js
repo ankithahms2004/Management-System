@@ -8,7 +8,7 @@ import {
     doneSuccess
 } from './teacherSlice';
 
-const REACT_APP_BASE_URL = "http://localhost:5000"
+const REACT_APP_BASE_URL = "https://management-system-iuzd.vercel.app"
 
 export const getAllTeachers = (id) => async (dispatch) => {
     dispatch(getRequest());
