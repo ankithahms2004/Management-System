@@ -6,7 +6,7 @@ import {
     getError
 } from './noticeSlice';
 
-const REACT_APP_BASE_URL = "https://management-system-iuzd.vercel.app"
+const REACT_APP_BASE_URL = "http://localhost:5000"
 
 export const getAllNotices = (id, address) => async (dispatch) => {
     dispatch(getRequest());
