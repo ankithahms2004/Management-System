@@ -14,7 +14,7 @@ app.use(cors(
     {
         origin:["https://management-system-frontend-ten.vercel.app"],
         methods:["POST","GET"],
-        credentials
+        credentials:true
     }
 ))
 
@@ -33,6 +33,9 @@ mongoose
     .catch((err) => console.log("NOT CONNECTED TO NETWORK", err))
 
 app.use('/', Routes);
+app.get('/',(req,res)=>{
+    res.json("Hello");
+})
 
 app.listen(PORT, () => {
     console.log(`Server started at port no. ${PORT}`)
