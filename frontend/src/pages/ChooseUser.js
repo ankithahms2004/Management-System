@@ -93,9 +93,9 @@ const ChooseUser = ({ visitor }) => {
                   <AccountCircle fontSize="large" />
                 </Box>
                 <StyledTypography>
-                  Admin
+                  principal
                 </StyledTypography>
-                Login as an administrator to access the dashboard to manage app data.
+                Login as an principal to access the dashboard to manage app data.
               </StyledPaper>
             </div>
           </Grid>
@@ -142,7 +142,7 @@ const ChooseUser = ({ visitor }) => {
 export default ChooseUser;
 
 const StyledContainer = styled.div`
-  background: linear-gradient(to bottom, #411d70, #19118b);
+  background:white;
   height: 120vh;
   display: flex;
   justify-content: center;
@@ -157,8 +157,9 @@ const StyledPaper = styled(Paper)`
   cursor:pointer;
 
   &:hover {
-    background-color: #2c2c6c;
-    color:white;
+    background-color: white;
+    color:black;
+box-shadow:2px;
   }
 `;
 
