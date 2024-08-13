@@ -12,7 +12,7 @@ dotenv.config();
 
 app.use(cors(
     {
-        origin:["https://management-system-frontend-ten.vercel.app/"],
+        origin:["https://management-system-frontend-ten.vercel.app"],
         methods:["POST","GET"],
         credentials
     }
