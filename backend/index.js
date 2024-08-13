@@ -10,13 +10,13 @@ const PORT = process.env.PORT || 5000
 
 dotenv.config();
 
-// app.use(cors(
-//     {
-//         origin:["https://management-system-frontend-ten.vercel.app"],
-//         methods:["POST","GET"],
-//         credentials:true
-//     }
-// ))
+app.use(cors(
+    {
+        origin:["https://management-system-frontend-ten.vercel.app"],
+        methods:["POST","GET"],
+        credentials:true
+    }
+))
 
 // app.use(bodyParser.json({ limit: '10mb', extended: true }))
 // app.use(bodyParser.urlencoded({ limit: '10mb', extended: true }))
