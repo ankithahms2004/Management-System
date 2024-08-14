@@ -13,10 +13,20 @@ dotenv.config();
 app.use(cors(
     {
         origin:["https://management-system-frontend-ten.vercel.app"],
-        methods:["POST","GET"],
-        credentials:true
+        methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+  credentials: true,
+  allowedHeaders: 'Content-Type,Authorization'
     }
 ))
+
+app.use((req, res, next) => {
+    res.setHeader('Access-Control-Allow-Origin', 'https://management-system-frontend-ten.vercel.app');
+    res.setHeader('Access-Control-Allow-Methods', 'GET,HEAD,PUT,PATCH,POST,DELETE');
+    res.setHeader('Access-Control-Allow-Headers', 'Content-Type,Authorization');
+    res.setHeader('Access-Control-Allow-Credentials', 'true');
+    next();
+  });
+  
 
 // app.use(bodyParser.json({ limit: '10mb', extended: true }))
 // app.use(bodyParser.urlencoded({ limit: '10mb', extended: true }))
